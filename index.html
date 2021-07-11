@@ -1,12 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="./assets/javascript/style.js"></script>
+  <title>Weather Dashboard</title>
 </head>
+
+
+<!-- Header -->
 <body>
-    
+  <header class="jumbotron">
+    <div class="container-fluid text-center">
+        <h1>Weather Dashboard</h1>
+    </div>
+  </header>
+
+<!-- main container -->
+  <main class="container-fluid">
+    <div class="row">
+        <!-- City search column -->
+        <div class="col-4 searchCol">
+            <h4>Search for a city</h4>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="City" aria-label="City" aria-describedby="basic-addon2" id="searchInput">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" id="searchBtn">Search</button>
+                </div>
+            </div> 
+            <!-- list of searched cities -->
+            <div class="list-group" id="searchCityList"></div>       
+        </div> 
+        
+        <!-- Displaying current day weather data -->
+        <div class="col-8">
+            <div class="container-fluid" style="width: 100%;" id="currWeatherCol">
+                <label for="city-name">City:</label><p id="city-name"></p>
+                <label for="city-temp">Temperature:</label><p id="city-temp"></p>
+                <label for="city-wind">Wind:</label><p id="city-wind"></p>
+                <label for="city-humidity">Humidity:</label><p id="city-humidity"></p>
+                <label for="city-UVI">UV Index:</label><p id="city-UVI"></p>
+            </div>
+            <div id="currWeather"></div>
+        </div>  
+    </div>
+    <div class="row">
+        <!-- Weather forecast column -->
+        <div class="span-4 col-8">
+            <div class="row">
+
+                <div id="forecast1" class="card col">
+                    <p id="date"></p>
+                    <p id="status"></p>
+                    <label for="city-name">City:</label>
+                    <p id="temp"></p>
+                    <label for="city-name">City:</label>
+                    <p id="wind"></p>
+                    <label for="city-name">City:</label>
+                    <p id="humidity"></p>
+                </div>
+                <div id="forecast2" class="card col">
+                    <p id="date"></p>
+                    <p id="status"></p>
+                    <label for="city-name">Temperature:</label>
+                    <p id="temp"></p>
+                    <label for="city-name">Wind:</label>
+                    <p id="wind"></p>
+                    <label for="city-name">Humidity:</label>
+                    <p id="humidity"></p>
+                </div>
+                <div id="forecast3" class="card col">
+                    <p id="date"></p>
+                    <p id="status"></p>
+                    <label for="city-name">Temperature:</label>
+                    <p id="temp"></p>
+                    <label for="city-name">Wind:</label>
+                    <p id="wind"></p>
+                    <label for="city-name">Humidity:</label>
+                    <p id="humidity"></p>
+                </div>
+                <div id="forecast4" class="card col">
+                    <p id="date"></p>
+                    <p id="status"></p>
+                    <label for="city-name">Temperature:</label>
+                    <p id="temp"></p>
+                    <label for="city-name">Wind:</label>
+                    <p id="wind"></p>
+                    <label for="city-name">Humidity:</label>
+                    <p id="humidity"></p>
+                </div>
+                <div id="forecast5" class="card col">
+                    <p id="date"></p>
+                    <p id="status"></p>
+                    <label for="city-name">City:</label>
+                    <p id="temp"></p>
+                    <label for="city-name">City:</label>
+                    <p id="wind"></p>
+                    <label for="city-name">City:</label>
+                    <p id="humidity"></p>
+                </div>
+            </div>
+        </div>
+            
+        </div>
+
+
+  </main>
+
+  
 </body>
+
 </html>
