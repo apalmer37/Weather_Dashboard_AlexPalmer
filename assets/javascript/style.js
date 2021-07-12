@@ -5,7 +5,7 @@ var searchCityList = [];
 initStoredCityList();
 initStoredCityWeather();
 
-// display city entered
+// display city list
 function rendercityEl(){
     $("#searchCityList").empty();
     $("#searchInput").val("");
@@ -29,7 +29,7 @@ function initStoredCityList(){
     rendercityEl();
 }
 
-// function to display most recent searched city's weather from local storage on reload
+// function to display most recent searched city's weather from local storage
 function initStoredCityWeather(){
     var lastCityWeather = JSON.parse(localStorage.getItem("lastCity"));
     if (lastCityWeather !== null){
@@ -69,11 +69,13 @@ $(document).on("click", "#searchBtn", function(event){
     storeLastCity();
 });
 
+// event function for clicking on a recently searched city, and showing it's weather info.
 $(document).on("click", ".pastCity", function(event){
     var pastCity = event.target.text;
     displayStoredCityWeather(pastCity);
 })
 
+// getting weather info for searched city. 
 async function displayStoredCityWeather(searchCityName) {
     var latLongURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + searchCityName + "&limit=1&appid=d3757787d6d1b961c0a83ab2dec89c1a";
     var latLongData = await $.ajax({
@@ -111,7 +113,7 @@ function renderWeatherData(data, searchCityName){
     // need to make cards for the five day forecast underneath the current day's forecast
 function renderForecastData(data) {
     for (let i = 1; i < 6; i++) {
-        var date = new Date(data[i].dt);
+        var date = new Date(data[i].dt * 1000);
         $(`#forecast${i} #date`).text(date.toLocaleDateString());
         var status = data[i].weather[0].main;
         var temp = data[i].temp.day;
