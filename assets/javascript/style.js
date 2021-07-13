@@ -99,15 +99,19 @@ function renderWeatherData(data, searchCityName){
     var cityWind = data.current.wind_speed;
     var cityHumidity = data.current.humidity;
     var cityUVI = data.current.uvi;
+
     var fiveForecast = data.daily;
 
     $("#city-name").text(searchCityName);
-    $("#city-temp").text(cityTemp);
-    $("#city-wind").text(cityWind);
-    $("#city-humidity").text(cityHumidity);
+    $("#city-temp").text(cityTemp + " F");
+    $("#city-wind").text(cityWind + " MPH");
+    $("#city-humidity").text(cityHumidity + " %");
     $("#city-UVI").text(cityUVI);
     renderForecastData(fiveForecast);   
 }
+
+ 
+     
 
     
     // need to make cards for the five day forecast underneath the current day's forecast

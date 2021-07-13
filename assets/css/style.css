@@ -1,0 +1,44 @@
+.searchCol {
+    background-color: lightgrey;
+    color: black
+}
+
+.btn {
+    background-color: blue;
+    color: white;
+}
+
+#currWeatherCol {
+    border: gray;
+    border-style: solid;
+    margin-right: 50%;
+}
+
+
+
+#forecast1 {
+    background-color: blue;
+    color: white;
+    justify-content: center;
+}
+
+#forecast2 {
+    background-color: blue;
+    color: white;
+}
+
+#forecast3 {
+    background-color: blue;
+    color: white;
+}
+
+#forecast4 {
+    background-color: blue;
+    color: white;
+}
+
+#forecast5 {
+    background-color: blue;
+    color: white;
+}
+
