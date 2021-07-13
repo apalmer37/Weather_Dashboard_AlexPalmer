@@ -125,8 +125,8 @@ function renderForecastData(data) {
         var humidity = data[i].humidity;
 
         $(`#forecast${i} #status`).text(status);
-        $(`#forecast${i} #temp`).text(temp);
-        $(`#forecast${i} #wind`).text(wind);
-        $(`#forecast${i} #humidity`).text(humidity);
+        $(`#forecast${i} #temp`).text(temp + " F");
+        $(`#forecast${i} #wind`).text(wind + " MPH");
+        $(`#forecast${i} #humidity`).text(humidity + " %");
     }
 }
